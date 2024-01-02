@@ -1,15 +1,17 @@
 import React from 'react';
-import './WeatherApp.css'
 import { Title } from './components/Title';
 import { CustomInput } from './components/CustomInput';
+import './WeatherApp.css';
 
 export const WeatherApp = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <Title />
+      <div className="App-main">
+        <div className="App-title">
+          <Title />
+        </div>
         <CustomInput placeholder='Enter city' />
-      </header>
+      </div>
     </div>
   );
 }
