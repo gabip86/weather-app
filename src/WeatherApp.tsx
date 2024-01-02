@@ -1,16 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Title } from './components/Title';
-import { CustomInput } from './components/CustomInput';
+import { SearchInput } from './components/SearchInput';
 import './WeatherApp.css';
+import { Details } from './components/Details';
 
 export const WeatherApp = () => {
+  const [cities, setCities] = useState([]);
+
   return (
     <div className="App">
       <div className="App-main">
         <div className="App-title">
           <Title />
         </div>
-        <CustomInput placeholder='Enter city' />
+        <SearchInput setCities={setCities} />
+        {!!cities.length &&
+          <Details cities={cities} />
+        }
       </div>
     </div>
   );

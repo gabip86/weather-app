@@ -1,0 +1,52 @@
+{
+  "cities": [
+    {
+      "id": 11,
+      "name": "Budapest",
+      "weather": [
+        {
+          "id": 1,
+          "day": "Mon",
+          "temp": 26,
+          "desc": "sunny"
+        },
+        {
+          "id": 2,
+          "day": "Tue",
+          "temp": 25,
+          "desc": "cloudy"
+        },
+        {
+          "id": 3,
+          "day": "Wed",
+          "temp": 24,
+          "desc": "rainy"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "name": "Alaska",
+      "weather": [
+        {
+          "id": 1,
+          "day": "Mon",
+          "temp": 2,
+          "desc": "snowy"
+        },
+        {
+          "id": 2,
+          "day": "Tue",
+          "temp": 0,
+          "desc": "snow"
+        },
+        {
+          "id": 3,
+          "day": "Wed",
+          "temp": -5,
+          "desc": "heavy snow"
+        }
+      ]
+    }
+  ]
+}
