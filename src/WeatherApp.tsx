@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import { Title } from './components/Title';
-import { SearchInput } from './components/SearchInput';
+import { Title, SearchInput, Details } from './components';
 import './WeatherApp.css';
-import { Details } from './components/Details';
+import { City } from './types/types';
 
 export const WeatherApp = () => {
-  const [cities, setCities] = useState([]);
+  const [cities, setCities] = useState<readonly City[]>([]);
 
   return (
     <div className="App">

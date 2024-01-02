@@ -1,6 +1,8 @@
 import { useCallback, KeyboardEvent, Dispatch, SetStateAction } from 'react';
+import { Form } from 'react-bootstrap';
+import { City } from '../types/types';
 
-export const SearchInput = ({ setCities }: { readonly setCities: Dispatch<SetStateAction<never[]>>}) => {
+export const SearchInput = ({ setCities }: { readonly setCities: Dispatch<SetStateAction<readonly City[]>> }) => {
   const getCities = useCallback(() => {
     const reqOptions = {
       method: "GET",
@@ -22,16 +24,7 @@ export const SearchInput = ({ setCities }: { readonly setCities: Dispatch<SetSta
 
   return (
     <>
-      <div className="input_wrapper">
-        <div className="input_container">
-          <input
-            id="search-input-id"
-            placeholder="Enter city"
-            name="search-input"
-            onKeyDown={onKeyDown}
-          />
-        </div>
-      </div>
+      <Form.Control id="search-input-id" placeholder="Enter city" onKeyDown={onKeyDown} style={{ width: '20rem' }} />
     </>
   )
 }

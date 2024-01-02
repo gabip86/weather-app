@@ -3,7 +3,7 @@
     {
       "id": 11,
       "name": "Budapest",
-      "weather": [
+      "forecasts": [
         {
           "id": 1,
           "day": "Mon",
@@ -27,7 +27,7 @@
     {
       "id": 22,
       "name": "Alaska",
-      "weather": [
+      "forecasts": [
         {
           "id": 1,
           "day": "Mon",
