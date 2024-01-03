@@ -8,19 +8,19 @@
           "id": 1,
           "day": "Mon",
           "temp": 26,
-          "desc": "sunny"
+          "desc": "Sunny"
         },
         {
           "id": 2,
           "day": "Tue",
           "temp": 25,
-          "desc": "cloudy"
+          "desc": "Cloudy"
         },
         {
           "id": 3,
           "day": "Wed",
           "temp": 24,
-          "desc": "rainy"
+          "desc": "Rainy"
         }
       ]
     },
@@ -32,19 +32,19 @@
           "id": 1,
           "day": "Mon",
           "temp": 2,
-          "desc": "snowy"
+          "desc": "Snowy"
         },
         {
           "id": 2,
           "day": "Tue",
           "temp": 0,
-          "desc": "snow"
+          "desc": "Snow"
         },
         {
           "id": 3,
           "day": "Wed",
           "temp": -5,
-          "desc": "heavy snow"
+          "desc": "Heavy Snow"
         }
       ]
     }

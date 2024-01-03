@@ -13,11 +13,11 @@ export const Details = ({ cities, inputValue }: Props) => {
     <Container>
       <Row className="justify-content-center">
         {selectedCity && selectedCity.forecasts.map((forecast: Forecast) => (
-          <Card key={forecast.id} style={{ width: '18rem' }}>
+          <Card key={forecast.id} style={{ width: '18rem' }} className="m-3">
             <Card.Body>
               <Card.Title>{forecast.day}</Card.Title>
+              <h1>{forecast.temp}°</h1>
               <p>{forecast.desc}</p>
-              <h2>{forecast.temp}</h2>
             </Card.Body>
           </Card>
         ))}

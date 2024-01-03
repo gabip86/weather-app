@@ -3,7 +3,7 @@
 }
 
 .App-main {
-    background-color: #282c34;
+    background-image: url("img/bg.webp");
     min-height: 100vh;
     display: flex;
     flex-direction: column;

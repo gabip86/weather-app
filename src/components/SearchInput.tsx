@@ -34,6 +34,7 @@ export const SearchInput = ({ setCities, setInputValue }: Props) => {
 
   return (
     <Form.Control
+      className="m-3"
       id="search-input-id"
       placeholder="Enter city"
       onKeyDown={onKeyDown}
