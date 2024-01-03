@@ -1,5 +1,5 @@
 import { Card, Container, Row } from 'react-bootstrap';
-import { City, Forecast } from '../types/types';
+import { City, Forecast } from '../types';
 
 interface Props {
   readonly cities: readonly City[];

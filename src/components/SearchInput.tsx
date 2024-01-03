@@ -1,6 +1,6 @@
 import { useCallback, KeyboardEvent, Dispatch, SetStateAction, ChangeEvent } from 'react';
 import { Form } from 'react-bootstrap';
-import { City } from '../types/types';
+import { City } from '../types';
 
 interface Props {
   readonly setCities: Dispatch<SetStateAction<readonly City[]>>
