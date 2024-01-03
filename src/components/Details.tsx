@@ -1,13 +1,18 @@
 import { Card, Container, Row } from 'react-bootstrap';
-import { Forecast } from '../types/types';
+import { City, Forecast } from '../types/types';
 
-export const Details = ({ ...props }) => {
-  const currentCity = props.cities[0];
+interface Props {
+  readonly cities: readonly City[];
+  readonly inputValue: string;
+}
+
+export const Details = ({ cities, inputValue }: Props) => {
+  const selectedCity = cities.find((city: City) => city.name.toLowerCase() === inputValue.toLowerCase());
 
   return (
     <Container>
       <Row className="justify-content-center">
-        {currentCity.forecasts.map((forecast: Forecast) => (
+        {selectedCity && selectedCity.forecasts.map((forecast: Forecast) => (
           <Card key={forecast.id} style={{ width: '18rem' }}>
             <Card.Body>
               <Card.Title>{forecast.day}</Card.Title>
