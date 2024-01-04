@@ -1,4 +1,4 @@
-import { useCallback, Dispatch, SetStateAction, ChangeEvent } from 'react';
+import { useCallback, Dispatch, SetStateAction, ChangeEvent, KeyboardEvent } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { City } from '../types';
 import { axiosClient } from '../axios';
@@ -21,11 +21,19 @@ export const SearchInput = ({ setCities, setInputValue }: Props) => {
   }, [setInputValue]);
 
   const handleClick = () => {
+    refetch();
     if (isSuccess) {
-      refetch();
       setCities(cities)
     }
   }
+
+  const onKeyDown = useCallback(
+    (keyEvent: KeyboardEvent<HTMLInputElement>) => {
+      if (keyEvent.key === 'Enter') {
+        keyEvent.preventDefault();
+      }
+    }, []
+  )
 
   if (isLoading) return <p>Loading...</p>;
   if (isError) return <p>Error :(</p>;
@@ -39,9 +47,10 @@ export const SearchInput = ({ setCities, setInputValue }: Props) => {
           placeholder="Enter city"
           style={{ width: '20rem' }}
           onChange={onChange}
+          onKeyDown={onKeyDown}
         />
       </Form.Group>
-      <Button variant="primary" type="submit" onClick={handleClick}>
+      <Button variant="primary" onClick={handleClick}>
         Search
       </Button>
     </Form>
