@@ -12,9 +12,9 @@ export const Weather = () => {
     <div className="App">
       <div className="App-main">
         <div className="App-title">
-          <Title />
+          <Title title="Weather" />
         </div>
-        <SearchInput setCities={setCities} setInputValue={setInputValue} />
+        <SearchInput inputValue={inputValue} setCities={setCities} setInputValue={setInputValue} />
         {!!cities.length &&
           <Details cities={cities} inputValue={inputValue} />
         }

@@ -1,5 +1,5 @@
-export const Title = () => {
+export const Title = ({ title }: { title: string }) => {
   return (
-    <p>Weather App</p>
+    <p>{title}</p>
   )
 }

@@ -6,11 +6,12 @@ import { City } from '../types';
 import { WeatherService } from '../services';
 
 interface Props {
-  readonly setCities: Dispatch<SetStateAction<readonly City[]>>
+  readonly inputValue: string;
+  readonly setCities: Dispatch<SetStateAction<readonly City[]>>;
   readonly setInputValue: Dispatch<SetStateAction<string>>;
 }
 
-export const SearchInput = ({ setCities, setInputValue }: Props) => {
+export const SearchInput = ({ inputValue, setCities, setInputValue }: Props) => {
   const { data: cities, isLoading, isError, refetch, isSuccess } = useQuery<readonly City[], Error>(
     'cities',
     async () => await WeatherService.findAll(),
@@ -43,15 +44,17 @@ export const SearchInput = ({ setCities, setInputValue }: Props) => {
     <Form>
       <Form.Group>
         <Form.Control
+          data-testid="search-input-test-id"
           className="m-3"
           id="search-input-id"
           placeholder="Enter city"
           style={{ width: '20rem' }}
           onChange={onChange}
           onKeyDown={onKeyDown}
+          value={inputValue}
         />
       </Form.Group>
-      <Button variant="primary" onClick={handleClick}>
+      <Button data-testid="search-button-test-id" variant="primary" onClick={handleClick}>
         Search
       </Button>
     </Form>

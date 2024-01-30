@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Title } from './Title';
 
 interface Props {
   readonly labelOn: string;
@@ -13,9 +14,12 @@ export const CheckboxWithLabel = ({ labelOn, labelOff }: Props): JSX.Element => 
   }
 
   return (
-    <label>
-      <input type='checkbox' checked={isChecked} onChange={onChange} />
-      {isChecked ? labelOn : labelOff}
-    </label>
+    <>
+      <Title title="Checkbox" />
+      <label>
+        <input type='checkbox' checked={isChecked} onChange={onChange} />
+        {isChecked ? labelOn : labelOff}
+      </label>
+    </>
   )
 }
