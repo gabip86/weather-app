@@ -23,3 +23,9 @@ about the latest weather conditions.
 * The app integrates with weather APIs to fetch real-time weather data,
 presenting users with accurate and up-to-date information about their selected locations.
 * Implement react-icons to showcase the current weather conditions.
+
+## Start the app
+`yarn start`
+
+## Start the fake server
+`json-server --watch src/db/db.json --port 3030`

@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { Title, SearchInput, Details } from './components';
-import './WeatherApp.css';
-import { City } from './types';
+import { Title, SearchInput } from '../components';
+import './Weather.css';
+import { City } from '../types';
+import { Details } from './Details';
 
-export const WeatherApp = () => {
+export const Weather = () => {
   const [cities, setCities] = useState<readonly City[]>([]);
   const [inputValue, setInputValue] = useState<string>('');
 

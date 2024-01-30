@@ -1,8 +1,9 @@
 import { useCallback, Dispatch, SetStateAction, ChangeEvent, KeyboardEvent } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { City } from '../types';
-import { axiosClient } from '../axios';
 import { useQuery } from 'react-query';
+
+import { City } from '../types';
+import { WeatherService } from '../services';
 
 interface Props {
   readonly setCities: Dispatch<SetStateAction<readonly City[]>>
@@ -12,7 +13,7 @@ interface Props {
 export const SearchInput = ({ setCities, setInputValue }: Props) => {
   const { data: cities, isLoading, isError, refetch, isSuccess } = useQuery<readonly City[], Error>(
     'cities',
-    () => axiosClient.get<readonly City[]>('/cities').then((res) => res.data),
+    async () => await WeatherService.findAll(),
     { enabled: false }
   )
 
