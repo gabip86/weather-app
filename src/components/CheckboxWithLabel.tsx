@@ -1,16 +1,16 @@
-import { useState } from 'react';
-import { Title } from './Title';
+import React, { useState } from 'react'
+import { Title } from './Title'
 
 interface Props {
-  readonly labelOn: string;
-  readonly labelOff: string;
+  readonly labelOn: string
+  readonly labelOff: string
 }
 
 export const CheckboxWithLabel = ({ labelOn, labelOff }: Props): JSX.Element => {
-  const [isChecked, setIsChecked] = useState<boolean>(false);
+  const [isChecked, setIsChecked] = useState<boolean>(false)
 
-  const onChange = () => {
-    setIsChecked(!isChecked);
+  const onChange = (): void => {
+    setIsChecked(!isChecked)
   }
 
   return (

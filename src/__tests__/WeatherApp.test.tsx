@@ -1,6 +1,6 @@
-import React from 'react';
-import { fireEvent, render, screen } from '@testing-library/react';
-import { Weather } from '../pages/Weather';
+import React from 'react'
+import { fireEvent, render, screen } from '@testing-library/react'
+import { Weather } from '../pages/Weather'
 
 const setup = () => {
   const utils = render(<Weather />)
@@ -9,13 +9,13 @@ const setup = () => {
   return {
     button,
     input,
-    ...utils,
+    ...utils
   }
 }
 
 describe('Weather page', () => {
   it('loads data', () => {
-    const { button } = setup();
+    const { button } = setup()
     fireEvent.click(button)
   })
-});
+})

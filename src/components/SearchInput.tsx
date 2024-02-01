@@ -1,4 +1,4 @@
-import { useCallback, Dispatch, SetStateAction, ChangeEvent, KeyboardEvent } from 'react';
+import React, { useCallback, Dispatch, SetStateAction, ChangeEvent, KeyboardEvent } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useQuery } from 'react-query';
 
@@ -32,13 +32,13 @@ export const SearchInput = ({ inputValue, setCities, setInputValue }: Props) => 
   const onKeyDown = useCallback(
     (keyEvent: KeyboardEvent<HTMLInputElement>) => {
       if (keyEvent.key === 'Enter') {
-        keyEvent.preventDefault();
+        keyEvent.preventDefault()
       }
     }, []
   )
 
-  if (isLoading) return <p>Loading...</p>;
-  if (isError) return <p>Error :(</p>;
+  if (isLoading) return <p>Loading...</p>
+  if (isError) return <p>Error :(</p>
 
   return (
     <Form>

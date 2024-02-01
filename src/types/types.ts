@@ -10,3 +10,7 @@ export type City = {
   name: string,
   forecasts: Forecast[],
 }
+
+export type UserFormikValues = {
+  userName: string,
+}
